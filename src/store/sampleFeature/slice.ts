@@ -1,6 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
-import { MY_DATA_CONSTANT } from '../../constants';
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+
+import { MY_DATA_CONSTANT } from "../../constants";
 
 // Define the shape of your data item
 export interface MyDataItem {
@@ -19,7 +19,7 @@ const initialState: SampleState = {
 };
 
 export const sampleSlice = createSlice({
-  name: 'sample',
+  name: "sample",
   initialState,
   reducers: {
     getMyData(state) {
@@ -29,7 +29,6 @@ export const sampleSlice = createSlice({
       state.myData = action.payload;
     },
   },
-
 });
 
 export const { getMyData, setMyData } = sampleSlice.actions;

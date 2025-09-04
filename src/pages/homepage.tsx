@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { selectMyData } from '../store/sampleFeature/selectors';
 import { getMyData } from '../store/sampleFeature/slice';
 import type { AppDispatch } from '../store/store';
@@ -14,10 +15,10 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center gap-4 p-3">
-   
+
       <div className="flex items-center gap-1 font-bold text-center text-lg">
         <svg
-          style={{ width: '60px', height: '60px' }} 
+          style={{ width: '60px', height: '60px' }}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
